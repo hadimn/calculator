@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater</title>
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="calculater">
+        <div class="screen">
+            <h4><span id="glow" style="display:inline;">&boxV;</span><span id="screenNum"></span></h4>
+        </div>
+        <div class="name">
+            <h1>Calculater</h1>
+        </div>
+        <div class="signature">
+            <h1>hadiMonzer</h1>
+        </div>
+        <div class="content">
+            <div class="keyboard">
+                <div id="nine" onclick="Display('nine')">
+                    <h3>9</h3>
+                </div>
+                <div id="eight" onclick="Display('eight')">
+                    <h3>8</h3>
+                </div>
+                <div id="seven" onclick="Display('seven')">
+                    <h3>7</h3>
+                </div>
+                <div id="six" onclick="Display('six')">
+                    <h3>6</h3>
+                </div>
+                <div id="five" onclick="Display('five')">
+                    <h3>5</h3>
+                </div>
+                <div id="four" onclick="Display('four')">
+                    <h3>4</h3>
+                </div>
+                <div id="three" onclick="Display('three')">
+                    <h3>3</h3>
+                </div>
+                <div id="two" onclick="Display('two')">
+                    <h3>2</h3>
+                </div>
+                <div id="one" onclick="Display('one')">
+                    <h3>1</h3>
+                </div>
+                <div id="zero" onclick="Display('zero')">
+                    <h3>0</h3>
+                </div>
+                <div id="dot" onclick="Display('dot')">
+                    <h3>.</h3>
+                </div>
+                <div id="delete" onclick="Display('delete')">
+                    <h3>C</h3>
+                </div>
+            </div>
+        </div>
+        <div class="calc">
+            <div id="add" onclick="Display('add')">&plus;</div>
+            <div id="sub" onclick="Display('sub')">-</div>
+            <div id="div" onclick="Display('div')">&divide;</div>
+            <div id="mul" onclick="Display('mul')">&times;</div>
+            <div id="equ" onclick="Display('equ')">&equals;</div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        var showText = function (target, message, index, interval) {
+            if (index < message.length) {
+                $(target).append(message[index++]);
+                setTimeout(function () { showText(target, message, index, interval); }, interval);
+            }
+        }
+        $(function () {
+            showText("#screenNum", "5x2=10", 0, 300);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    background-color: coral;
+    justify-content: center;
+}
+
+.calculater {
+    margin-top: 50px;
+    border: 1px solid rgba(250, 103, 50, 0.89);
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    width: 30%;
+    height: 500px;
+    background-color: aqua;
+    /* background: url("images/blackwhite.png"); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.425);
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.35);
+}
+
+.calculater .screen {
+    border-radius: 10px;
+    position: absolute;
+    top: 40px;
+    border: 1px solid black;
+    width: 78%;
+    color: azure;
+    background-color: rgba(0, 0, 0, 0.79);
+}
+
+.calculater .screen h4 {
+    margin-left: 20px;
+}
+
+.calculater .content {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.79);
+    color: azure;
+    border: 2px solid black;
+    width: 60%;
+    height: 300px;
+    margin-top: 150px;
+    margin-right: 70px;
+    position: relative;
+}
+
+.calculater .content .keyboard {
+    line-height: 10px;
+    margin-top: 15px;
+    position: absolute;
+    width: fit-content;
+    width: 100%;
+    height:100%;
+}
+
+.calculater .content .keyboard div {
+    margin-right: -18px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+    display: inline-block;
+    width: 37%;
+    cursor: pointer;
+    text-align: center;
+    padding: 0;
+    margin-left: 2px;
+}
+
+.calculater .content .keyboard div:hover {
+    transform: scale(1.09);
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+.calculater .calc {
+    height:280px;
+    border: 1px solid black;
+    font-size: 40px;
+    margin-top: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: -50px;
+    background-color: rgba(0, 0, 0, 0.79);
+    color: white;
+    text-align: center;
+    line-height: 58px;
+}
+
+.calculater .calc div {
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.calculater .calc div:hover {
+    transform: scale(1.09);
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+.calculater .name {
+    position: absolute;
+    top: 17%;
+    font-size: 25px;
+}
+
+.calculater .signature {
+    position: absolute;
+    top: -18px;
+    font-family: 'Dancing Script', cursive;
+}
+
+
+@media(max-width:800px) {
+    .calculater {
+        margin-top: 0;
+        width: 100%;
+        height: 95vh;
+    }
+}
+
+@media only screen and (max-width:800px) and (min-width:430px){
+    .keyboard{
+        display:inline-table;
+        height:100%;
+    }
+}
+
